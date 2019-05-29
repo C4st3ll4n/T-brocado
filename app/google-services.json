@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "873528650865",
+    "firebase_url": "https://brocado-62e26.firebaseio.com",
+    "project_id": "brocado-62e26",
+    "storage_bucket": "brocado-62e26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873528650865:android:97d5d0041ca86ecb",
+        "android_client_info": {
+          "package_name": "br.com.ifood.cursoandroid.ifood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873528650865-i1q29a2s5qq1i5ngfrao2v7av9g3gc4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ifood.cursoandroid.ifood",
+            "certificate_hash": "5989283f980d585626fecbb03576057ccbef6689"
+          }
+        },
+        {
+          "client_id": "873528650865-8a5v78rjj1tvj3jfi0oor7nj8gf3p56v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC99fYH5IxY0hLRjNBCtCZ5lEML0FdR_gU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873528650865-8a5v78rjj1tvj3jfi0oor7nj8gf3p56v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
