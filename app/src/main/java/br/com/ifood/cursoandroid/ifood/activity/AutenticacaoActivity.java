@@ -3,6 +3,7 @@ package br.com.ifood.cursoandroid.ifood.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -23,11 +24,13 @@ import br.com.ifood.cursoandroid.ifood.activity.usuario.HomeActivity;
 import br.com.ifood.cursoandroid.ifood.helper.ConfiguracaoFirebase;
 import br.com.ifood.cursoandroid.ifood.helper.UsuarioFirebase;
 
-public class AutenticacaoActivity extends Activity {
+import static android.view.View.*;
+
+public class AutenticacaoActivity extends AppCompatActivity {
 
     private Button botaoAcessar;
     private EditText campoEmail, campoSenha;
-    private Switch tipoAcesso;
+    private Switch tipoAcesso, tipoUser;
 
     private FirebaseAuth autenticacao;
     private LinearLayout linearTipoUser;
@@ -36,7 +39,7 @@ public class AutenticacaoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autenticacao);
-        getActionBar().hide();
+//        getActionBar().hide();
 
         inicializaComponentes();
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -133,9 +136,9 @@ public class AutenticacaoActivity extends Activity {
 
     private void check(CompoundButton compoundButton, boolean b) {
         if (b) {
-            linearTipoUser.setVisibility(View.VISIBLE);
+            linearTipoUser.setVisibility(VISIBLE);
         } else {
-            linearTipoUser.setVisibility(View.VISIBLE);
+            linearTipoUser.setVisibility(GONE);
         }
     }
 
@@ -156,11 +159,12 @@ public class AutenticacaoActivity extends Activity {
         campoSenha = findViewById(R.id.editCadastroSenha);
         botaoAcessar = findViewById(R.id.buttonAcesso);
         tipoAcesso = findViewById(R.id.switchAcesso);
+        tipoUser = findViewById(R.id.switchTipoUsuario);
         linearTipoUser = findViewById(R.id.linearlTipoUsuario);
     }
 
     private String getTipoUser() {
-        return tipoAcesso.isChecked() ? "E" : "U";
+        return tipoUser.isChecked() ? "E" : "U";
     }
 
 }

@@ -2,9 +2,11 @@ package br.com.ifood.cursoandroid.ifood.model;
 
 import com.google.firebase.database.DatabaseReference;
 
+import java.io.Serializable;
+
 import br.com.ifood.cursoandroid.ifood.helper.ConfiguracaoFirebase;
 
-public class Empresa {
+public class Empresa implements Serializable {
     private String nome, idUsuario, urlImagem, tempo, categoria;
     private Double taxaEntrega;
 
@@ -66,5 +68,13 @@ public class Empresa {
                 .child("empresas").child(getIdUsuario());
 
         empresaRef.setValue(this);
+    }
+
+    public Double getTaxaEntrega() {
+        return taxaEntrega;
+    }
+
+    public void setTaxaEntrega(Double taxaEntrega) {
+        this.taxaEntrega = taxaEntrega;
     }
 }

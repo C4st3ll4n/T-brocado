@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.usuario.CardapioActivity" android:parentActivityName=".activity.usuario.HomeActivity"></activity>
         <activity
             android:name=".activity.usuario.ConfiguracoesUsuarioActivity"
-            android:parentActivityName=".activity.usuario.HomeActivity"></activity>
-
+            android:parentActivityName=".activity.usuario.HomeActivity" />
         <activity
             android:name=".activity.empresa.NovoProdutoEmpresaActivity"
             android:parentActivityName=".activity.empresa.EmpresaActivity" />
@@ -20,7 +20,6 @@
             android:name=".activity.empresa.ConfiguracoesEmpresaActivity"
             android:parentActivityName=".activity.empresa.EmpresaActivity" />
         <activity android:name=".activity.empresa.EmpresaActivity" />
-
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +29,10 @@
         </activity>
         <activity android:name=".activity.AutenticacaoActivity" />
         <activity android:name=".activity.usuario.HomeActivity" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="84c0942498a9005dcbea46b0bdbdf34571001e64" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
